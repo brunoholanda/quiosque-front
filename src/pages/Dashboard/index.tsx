@@ -42,7 +42,9 @@ const Dashboard = () => {
     try {
       await campaignService.delete(id)
       message.success('Campanha deletada com sucesso!')
-      loadCampaigns()
+      // Recarregar lista e garantir que está no dashboard
+      await loadCampaigns()
+      navigate('/dashboard', { replace: true })
     } catch (error) {
       message.error('Erro ao deletar campanha')
     }
