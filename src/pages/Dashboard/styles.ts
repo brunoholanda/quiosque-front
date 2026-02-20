@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Card } from 'antd'
+import { Card, Button } from 'antd'
 
 export const Container = styled.div`
   width: 100%;
@@ -165,5 +165,35 @@ export const LoadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 400px;
+`
+
+export const CopyLinkButton = styled(Button)`
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  border: none;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(82, 196, 26, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #73d13d 0%, #95de64 100%);
+    box-shadow: 0 4px 12px rgba(82, 196, 26, 0.4);
+    transform: translateY(-1px);
+    color: white;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  .anticon {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4px 8px;
+    height: auto;
+    min-height: 32px;
+  }
 `
 

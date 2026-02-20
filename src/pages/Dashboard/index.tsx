@@ -215,15 +215,17 @@ const Dashboard = () => {
                           />
                         </Tooltip>
                         <Tooltip title="Copiar Link">
-                          <Button
-                            type="text"
+                          <S.CopyLinkButton
+                            type="primary"
                             icon={<CopyOutlined />}
                             size="small"
                             onClick={(e) => {
                               e.stopPropagation()
                               copyCampaignLink(campaign.id)
                             }}
-                          />
+                          >
+                            <span className="hide-mobile">Copiar Link</span>
+                          </S.CopyLinkButton>
                         </Tooltip>
                         <Tooltip title="Editar">
                           <Button
